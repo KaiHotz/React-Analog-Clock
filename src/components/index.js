@@ -43,7 +43,7 @@ export const MinuteHand = styled(BaseHand)`
   left: 45%;
   outline: 2px solid #fff;
   width: 50%;
-  transform-origin: 11%;
+  transform-origin: 10%;
   transform: rotate(${props => getAngle(props.fraction, 6)}deg)
 `
 
