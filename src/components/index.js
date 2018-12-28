@@ -4,7 +4,7 @@ const getAngle = (fraction, factor) => (270 + (fraction * factor))
 
 const BaseHand = styled.div`
   position: absolute;
-	top: 50%;
+  top: 50%;
 `
 
 export const ClockBase = styled.div`
@@ -19,21 +19,21 @@ export const ClockBase = styled.div`
 
 export const Center = styled.div`
   position: absolute;
-	top: 50%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-	width: 12px;
-	height: 12px;
-	border: 2px solid #fff;
-	background-color: orange;
-	border-radius: 100%;
-	z-index: 100;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  background-color: orange;
+  border-radius: 100%;
+  z-index: 100;
 `
 
 export const SecondHand = styled(BaseHand)`
-	left: 40%;
-	outline: 2px solid orange;
-	width: 59%;
+  left: 40%;
+  outline: 2px solid orange;
+  width: 59%;
   transform-origin: 17%;
   transform: rotate(${props => getAngle(props.fraction, 6)}deg);
   transition: ${props => props.fraction > 0 && 'transform 0.5s ease-in-out'}
@@ -41,16 +41,16 @@ export const SecondHand = styled(BaseHand)`
 
 export const MinuteHand = styled(BaseHand)`
   left: 45%;
-	outline: 2px solid #fff;
-	width: 45%;
+  outline: 2px solid #fff;
+  width: 50%;
   transform-origin: 11%;
   transform: rotate(${props => getAngle(props.fraction, 6)}deg)
 `
 
 export const HourHand = styled(BaseHand)`
-	left: 45%;
+  left: 45%;
   outline: 2px solid #fff;
-	width: 35%;
+  width: 35%;
   transform-origin: 14%;
   transform: rotate(${props => getAngle(props.fraction, 30)}deg)
 `
