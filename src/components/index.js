@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const getAngle = (fraction, factor) => (270 + (fraction * factor))
+const getAngle = (fraction, factor=6) => (270 + (fraction * factor))
 
 const BaseHand = styled.div`
   position: absolute;
@@ -35,7 +35,7 @@ export const SecondHand = styled(BaseHand)`
   outline: 2px solid orange;
   width: 59%;
   transform-origin: 17%;
-  transform: rotate(${props => getAngle(props.fraction, 6)}deg);
+  transform: rotate(${props => getAngle(props.fraction)}deg);
   transition: ${props => props.fraction > 0 && 'transform 250ms ease-in-out'}
 `
 
@@ -44,7 +44,7 @@ export const MinuteHand = styled(BaseHand)`
   outline: 2px solid #fff;
   width: 50%;
   transform-origin: 10%;
-  transform: rotate(${props => getAngle(props.fraction, 6)}deg)
+  transform: rotate(${props => getAngle(props.fraction)}deg)
 `
 
 export const HourHand = styled(BaseHand)`
