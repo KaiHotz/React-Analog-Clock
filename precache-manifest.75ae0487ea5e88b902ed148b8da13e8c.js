@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/React-Analog-Clock/static/js/runtime~main.c80b5e14.js"
   },
   {
-    "revision": "6fc568317c716cd759e0",
-    "url": "/React-Analog-Clock/static/js/main.6fc56831.chunk.js"
+    "revision": "ec2d4893bb96e6798eb7",
+    "url": "/React-Analog-Clock/static/js/main.ec2d4893.chunk.js"
   },
   {
     "revision": "e77f8e9500c725bcefb0",
     "url": "/React-Analog-Clock/static/js/1.e77f8e95.chunk.js"
   },
   {
-    "revision": "6fc568317c716cd759e0",
+    "revision": "ec2d4893bb96e6798eb7",
     "url": "/React-Analog-Clock/static/css/main.a97188f7.chunk.css"
   },
   {
-    "revision": "d4fd5e815c6faa1787592a85577803dc",
+    "revision": "3cd86759577c51bf2403c547e60a6ed6",
     "url": "/React-Analog-Clock/index.html"
   }
 ];
