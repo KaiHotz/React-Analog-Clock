@@ -15,6 +15,10 @@ export const ClockBase = styled.div`
   margin: 0 auto;
   background-color: black;
   border-radius: 100%;
+  @media only screen and (orientation : landscape) {
+    width: 50vh;
+    height: 50vh;
+  }
 `
 
 export const Center = styled.div`
