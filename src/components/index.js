@@ -40,7 +40,7 @@ export const SecondHand = styled(BaseHand)`
   width: 59%;
   transform-origin: 17%;
   transform: rotate(${props => getAngle(props.fraction)}deg);
-  transition: ${props => props.fraction > 0 && 'transform 250ms ease-in-out'}
+  transition: ${props => props.fraction > 0 ? 'transform 250ms ease-in-out' : 'none'}
 `
 
 export const MinuteHand = styled(BaseHand)`
