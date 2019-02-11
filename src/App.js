@@ -1,41 +1,27 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import { useInterval } from './hooks'
 import { ClockBase, Center, SecondHand, MinuteHand, HourHand } from './components'
 
-class App extends Component {
+const App = () => {
+  const [seconds, setSeconds] = useState(0)
+  const [minutes, setMinutes] = useState(0)
+  const [hours, setHours] = useState(0)
 
-  state = {
-    seconds: 0,
-    minutes: 0,
-    hours: 0
-  }
+  useInterval(() => {
+    let date = new Date();
+    setSeconds(date.getSeconds())
+    setMinutes(date.getMinutes())
+    setHours(date.getHours() % 12 || 12)
+  }, 1000)
 
-  componentDidMount() {
-    setInterval(() => {
-      let date = new Date();
-      this.setState(() => ({
-        seconds: date.getSeconds(),
-        minutes: date.getMinutes(),
-        hours: date.getHours() % 12 || 12
-      }))
-    }, 1000)
-  }
-
-  render() {
-    const {
-      seconds,
-      minutes,
-      hours,
-    } = this.state;
-
-    return (
-      <ClockBase>
-        <Center />
-        <SecondHand fraction={seconds} />
-        <MinuteHand fraction={minutes} />
-        <HourHand fraction={hours} />
-      </ClockBase>
-    )
-  }
+  return(
+    <ClockBase>
+      <Center />
+      <SecondHand fraction={seconds} />
+      <MinuteHand fraction={minutes} />
+      <HourHand fraction={hours} />
+    </ClockBase>
+  )
 }
 
 export default App;
