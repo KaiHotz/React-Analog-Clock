@@ -26,3 +26,8 @@ Click [here](https://github.com/KaiHotz/React-Analog-Clock/archive/master.zip) t
   > npm start
   > in your Browser open http://localhost:3000
 ```
+
+## Support
+If you like the project and want to support my work, you can buy me a coffee :)
+
+[![paypal](https://img.shields.io/badge/donate-paypal-blue.svg)](https://paypal.me/kaihotz)
